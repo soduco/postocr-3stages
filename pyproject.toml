@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "postocr-3stages"
+version = "0.1.0"
+description = "Post-OCR correction in 3 stages."
+authors = ["EPITA Research Lab <contact@lre.epita.fr>"]
+
+[tool.poetry.dependencies]
+python = ">=3.7,<3.11"
+
+
+[tool.poetry.dev-dependencies]
+tox = ">=3.24"
+pytest = "^6.2.1"
+flake8 = "^4.0.1"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
