@@ -30,35 +30,50 @@ pip install .
 ```
 
 
-## 🛠️ Prepare your data
-- size requirements (number of elements, sample len)
-- syntactic properties
-- format
-
-
 ## 🚀 Quick start
 
-The example below assumes a dataset is loaded as a Pandas Dataframe with the following two columns:
+This package tries to mimic the interface of [sklearn](https://scikit-learn.org/stable/) for easier use and compatibility.
+
+Here is a minimal example to understand how the library works. In this example we try to make the model learn to transform the string "x" into "y".
+The `.score` functions compute the [Character Error Rate (CER)](https://huggingface.co/spaces/evaluate-metric/cer), the lower, the better.
 
 - `"OCR"`: original transcription from some OCR system to correct
 - `"Gold"`: target transcription
 
 ```python
-from postocr_3stages import Pipeline
+import pandas as pd
 
-train_dataset, test_dataset = # FIXME load your dataset
+from src.error_detector import ErrorDetector
+from src.controller import LengthController
+from src.NMT_corrector import NMTCorrector
+from src.pipeline import Pipeline
 
-postocr = Pipeline()
-postocr.fit(train_dataset["OCR"], train_dataset["Gold"])
-# ... wait
-print("Post-OCR CER:")
-print(postocr.score(train_dataset["OCR"], train_dataset["Gold"]))
+x = pd.Series(["x"] * 100)
+y = pd.Series(["y"] * 100)
 
-print("Sample correction")
-print(postocr.predict(["Samp1e strimg to corect."]))
+pipeline = Pipeline(
+    error_detector=ErrorDetector(),
+    nmt_corrector=NMTCorrector(train_steps=10),
+    controller=LengthController(),
+)
+
+pipeline.fit(x, y)
+pipeline.score(x, y) # 0 of CER
+pipeline.predict(pd.Series("x")) # predict "y"
 ```
 
 For more examples, see our [demo notebook](notebooks/demo.ipynb).
+
+
+## 🛠️ Prepare your data
+For both training and inference, data should be passed as a [Pandas' Series](https://pandas.pydata.org/docs/reference/api/pandas.Series.html) of raw text.
+Here is a minimal example of what such series could look like:
+```python
+import pandas as pd
+
+X = pd.Series(["hello i'm some ocred text"])
+y = pd.Series(["hello i'm the correct text"])
+```
 
 
 ## 🔧 API
