@@ -59,7 +59,7 @@ class ErrorDetector:
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         self.model = AutoModelForSequenceClassification.from_pretrained(
             self.model_name, num_labels=1
-        ).to(np.float)
+        ).to(float)
         self.per_device_train_batch_size = per_device_train_batch_size
         self.num_train_epochs = num_train_epochs
         self.seed = seed
