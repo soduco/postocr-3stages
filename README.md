@@ -43,10 +43,10 @@ The `.score` functions compute the [Character Error Rate (CER)](https://huggingf
 ```python
 import pandas as pd
 
-from src.error_detector import ErrorDetector
-from src.controller import LengthController
-from src.NMT_corrector import NMTCorrector
-from src.pipeline import Pipeline
+from postocr_3stages.error_detector import ErrorDetector
+from postocr_3stages.controller import LengthController
+from postocr_3stages.NMT_corrector import NMTCorrector
+from postocr_3stages.pipeline import Pipeline
 
 x = pd.Series(["x"] * 100)
 y = pd.Series(["y"] * 100)

@@ -5,7 +5,7 @@ description = "Post-OCR correction in 3 stages."
 authors = ["EPITA Research Lab <contact@lre.epita.fr>"]
 license = "GPL"
 readme = "README.md"
-packages = [{ include = "postocr-3stages", from = "src" }]
+packages = [{ include = "postocr_3stages", from = "src" }]
 include = [{ path = "tests", format = "sdist" }]
 repository = "https://github.com/soduco/postocr-3stages"
 
@@ -27,7 +27,7 @@ OpenNMT-py = "^3.0.4"
 pybind11 = "^2.10.3"
 sentencepiece = "^0.1.97"
 transformers = "^4.26.1"
-accelerate = "^0.18.0"
+accelerate = ">=0.20.1"
 
 
 [tool.poetry.group.test.dependencies]

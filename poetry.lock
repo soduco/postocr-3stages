@@ -14,14 +14,14 @@ files = [
 
 [[package]]
 name = "accelerate"
-version = "0.18.0"
+version = "0.20.3"
 description = "Accelerate"
 category = "main"
 optional = false
 python-versions = ">=3.7.0"
 files = [
-    {file = "accelerate-0.18.0-py3-none-any.whl", hash = "sha256:41a84ac94407d7dcf030caf0cdadc70496594aec27ea680207bdb15b95f8a602"},
-    {file = "accelerate-0.18.0.tar.gz", hash = "sha256:1dd36fd972de4a6d0cffe5e4d6d30622fd853765f773b5582cf0796deefe1016"},
+    {file = "accelerate-0.20.3-py3-none-any.whl", hash = "sha256:147183e7a2215f7bd45a7af3b986a963daa8a61fa58b0912b9473049e011ad15"},
+    {file = "accelerate-0.20.3.tar.gz", hash = "sha256:79a896978c20dac270083d42bf033f4c9a80dcdd6b946f1ca92d8d6d0f0f5ba9"},
 ]
 
 [package.dependencies]
@@ -29,11 +29,11 @@ numpy = ">=1.17"
 packaging = ">=20.0"
 psutil = "*"
 pyyaml = "*"
-torch = ">=1.4.0"
+torch = ">=1.6.0"
 
 [package.extras]
-dev = ["black (>=23.1,<24.0)", "datasets", "deepspeed", "evaluate", "hf-doc-builder (>=0.3.0)", "parameterized", "pytest", "pytest-subtests", "pytest-xdist", "rich", "ruff (>=0.0.241)", "scikit-learn", "scipy", "tqdm", "transformers"]
-quality = ["black (>=23.1,<24.0)", "hf-doc-builder (>=0.3.0)", "ruff (>=0.0.241)"]
+dev = ["black (>=23.1,<24.0)", "datasets", "deepspeed", "evaluate", "hf-doc-builder (>=0.3.0)", "parameterized", "pytest", "pytest-subtests", "pytest-xdist", "rich", "ruff (>=0.0.241)", "scikit-learn", "scipy", "tqdm", "transformers", "urllib3 (<2.0.0)"]
+quality = ["black (>=23.1,<24.0)", "hf-doc-builder (>=0.3.0)", "ruff (>=0.0.241)", "urllib3 (<2.0.0)"]
 rich = ["rich"]
 sagemaker = ["sagemaker"]
 test-dev = ["datasets", "deepspeed", "evaluate", "scikit-learn", "scipy", "tqdm", "transformers"]
@@ -3521,4 +3521,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<3.11"
-content-hash = "d64cbdf428440bf4dd058fb290b5efc1f3e64251fd40998121a0d08f8b54e075"
+content-hash = "8394d8eb57620579575043e8cc6edb0b5ff4ac3ec6c45099b04c4e313ab60b2e"
