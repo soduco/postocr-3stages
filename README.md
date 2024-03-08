@@ -5,6 +5,8 @@
 This is the home of the `postocr-3stages` Python package.
 It aims at offering a simple solution for post-OCR correction with a friendly, *scikit-learn*-like API.
 
+[![](https://img.shields.io/badge/HAL-Presentation-red)](https://hal.science/hal-04495595) [![](https://img.shields.io/badge/PDF-Presentation-blue)](./documentation/20230609-SIFED-postocr.pdf) Slides (in French) presented at SIFED 2023
+
 
 ## 📦 Installation
 For now, the module can be almost completely installed using pip, except for our prototype for fast computation of edits between OCR and corrected strings.
