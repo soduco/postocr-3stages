@@ -7,6 +7,8 @@ It aims at offering a simple solution for post-OCR correction with a friendly, *
 
 [![](https://img.shields.io/badge/HAL-Presentation-red)](https://hal.science/hal-04495595) [![](https://img.shields.io/badge/PDF-Presentation-blue)](./documentation/20230609-SIFED-postocr.pdf) Slides (in French) presented at SIFED 2023
 
+[![](https://img.shields.io/badge/PDF-State--of--the--art-red)](./documentation/20221108-State-of-the-art-Post-OCR.pdf) [![](https://img.shields.io/badge/PDF-Project--Report-blue)](./documentation/20221128-PRAT-project.pdf) State-of-the-art and final project report (in English).
+
 
 ## 📦 Installation
 For now, the module can be almost completely installed using pip, except for our prototype for fast computation of edits between OCR and corrected strings.
